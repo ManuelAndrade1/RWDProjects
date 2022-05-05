@@ -1,0 +1,130 @@
+<!DOCTYPE HTML5>
+
+<html>
+<head>
+    <title>Landing Page</title>
+    <style>
+        body {
+            background-color: rgba(168, 168, 168, 0.5);
+            font-family: Open Sans;
+        }
+        main {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        li {display: inline;}
+        #header {
+            width: 100vw;
+            position: fixed;
+            top: 0px;
+            left: 0px;
+            background-color: white;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            z-index: 1;
+        }
+        #header-img {
+            width: 40vw;
+            max-width: 500px;
+        }
+        #nav-bar {
+            width: 30vw;
+            min-width: 300px;
+
+        }
+        #nav-container{
+            display: grid;
+            grid-template-areas: "link1 link2 link3"
+
+        }
+        #page-title{
+            position: relative;
+            text-align: center;
+            top: 40px;
+        }
+        #form{
+            display:flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        #video{
+            width: 75vw;
+            max-width: 500px;
+        }
+        #container {
+            font-size: 20px;
+            display: grid;
+            grid-template-rows: auto;
+            grid-template-columns: 84px 5fr;
+            grid-template-areas: "icon1 content1" "icon2 content2" "icon3 content3";
+            grid-gap: 10px 20px;
+        }
+        #icon1 { grid-area: icon1;}
+        #icon2 { grid-area: icon2;}
+        #icon3 { grid-area: icon3;}
+        #p1 { grid-area:content1;}
+        #p2 { grid-area:content2;}
+        #p3 { grid-area:content3;}
+        .icons {
+            width: 84px;
+        }
+        @media (max-width: 700px){
+            #header{
+                flex-direction: column;
+                align-items: center;
+                flex-wrap: wrap;
+            }
+            #nav-container {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+            #container {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+            .icons{visibility: hidden;}
+        }
+        </style>
+</head>
+<body>
+    <header id="header">
+        <img id="header-img" src=".\Logo.png" alt="Company Logo">
+        <nav id="nav-bar">
+            <ul id="nav-container">
+                <li><a class="nav-link" href="#container">Features</a></li>
+                <li><a class="nav-link" href="#video">Video</a></li>
+                <li><a class="nav-link" href="#form">Newsletter</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <h2 id="page-title">Handcrafted by the best of the best</h2><br><br>
+        <div id="container">
+            <img id="icon1" class="icons" src=".\pencil.png" alt="Pencil image">
+            <p id="p1" class="features">Customize your guitar to look however you want!</p>
+            <img id="icon2" class="icons" src=".\worldwide.png" alt="World image">
+            <p id="p2" class="features">Order from anywhere! We make sure our products reach every corner of the world.</p>
+            <img id="icon3" class="icons" src=".\guarantee-certificate.png" alt="Guarantee image">
+            <p id="p3" class="features">Buy without worrying! With every purchase we give you a 1-year guarantee for any problems you may find.</p>
+        </div><br><br><br>
+        <video id="video" controls>
+            <source src="handcraftedvideo.mp4" type="video/mp4">
+                Your browser does not allow this media
+            </video>
+            <p>Link to the original video creator, click <a href="https://www.youtube.com/watch?v=fze_k0qlV2g" target="_blank">here</a></p>
+            <br><br><br><br><br>
+        <form id="form" action="https://www.freecodecamp.com/email-submit">
+            <label for="email">
+            <input id="email" type="email" placeholder="Enter your email" name="email"  required>
+            </label>
+            <label for="submit">
+            <input id="submit" type="submit" placeholder="Submit!">
+            </label>
+        </form>
+    </main>
+</body>
+</html>

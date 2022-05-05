@@ -1,0 +1,199 @@
+<!DOCTYPE HTML5>
+
+<html>
+    <head>
+        <title>My portfolio</title>
+        <style>
+            body {
+                margin: 0px;
+                padding: 0px;
+            }
+            main {
+                background-color: rgb(23, 22, 22);
+                margin: 0px;
+                padding: 0px;
+                overflow-x: hidden;
+                display: flex;
+                flex-direction: column;
+            }
+            h1 {
+                color: white;
+                font-size: 48px;
+            }
+            a {
+                color: white;
+                text-decoration: none;
+            }
+            .section-format {
+                height: 100vh;
+                width: 100vw;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+            }
+            .title-format {
+                text-align: center;
+                font-family: Open Sans;
+            }
+            .nav-links {
+                display: inline;
+                list-style-type: none;
+                padding-right: 80px;
+                text-decoration: none;
+                color: white;
+                font-family: Quicksand;
+                font-size: 20px;
+            }
+            .nav-links:hover {
+                font-size: 22px;
+            }
+            .project-tile {
+                width: 350px;
+                height: 360px;
+                border: 1px solid rgb(39, 41, 43);
+            }
+            .img-caption {
+                width: 350px;
+                height: 60px;
+                background-color: rgb(39, 41, 43);
+                border: 1px solid rgb(39, 41, 43);
+            }
+            .cc {
+                color: white;
+                font-family: Quicksand;
+                font-size: 24px;
+                font-weight: 100;
+                text-align: center;
+                position: relative;
+                top: 50%;
+                transform: translateY(-50%);
+            }
+            #navbar {
+                z-index: 1;
+                position: fixed;
+                top: 0px;
+                left: 0px;
+                background-color: rgb(176, 42, 42);
+                width: 100vw;
+            }
+            #nav-core {
+                display: flex;
+                justify-content: flex-end;
+            }
+            #projects {
+                background-color: rgb(8, 65, 117);
+            }
+            #subtitle{
+                color: rgb(176, 42, 42);
+                font-size: 36px;
+                font-style: italic;
+                font-weight: normal;
+                margin-top: -20px;
+            }
+            #projects-title {
+                position: relative;
+                left: 50%;
+                transform: translateX(-50%);
+                width: 700px;
+                text-align: center;
+                color: white;
+                font-size: 36px;
+                font-family: Roboto;
+                border-bottom: 1px solid white;
+                padding-bottom: 10px;
+                padding-top: 30px;
+
+            }
+            #container {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: space-evenly;
+            }
+            #odd-one {
+                justify-self: center;
+            }
+            #contact-info {
+                height: 100vh;
+            }
+            #contact-title {
+                font-size: 60px;
+            }
+            #contact-subtitle {
+                color: white;
+                font-size: 24px;
+                font-style: italic;
+                font-weight: normal;
+                margin-top: -35px;
+            }
+            #logo {
+                width: 200px;
+            }
+            #logo-link {
+                align-self: center;
+            }
+            @media (max-width: 500px) {
+                #projects-title {
+                    font-size: 24px;
+                    width: 400px;
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <main>
+        <nav id="navbar">
+            <ul id="nav-core">
+                <li class="nav-links"><a href="#welcome-section">About</a></li>
+                <li class="nav-links"><a href="#projects">Work</a></li>
+                <li class="nav-links"><a href="#contact-info">Contact</a></li>
+                </ul>
+        </nav>
+        <section id="welcome-section" class="section-format">
+            <h1 class="title-format">Hey, I am Dax</h1>
+            <h2 id="subtitle" class="title-format">a web developer, in progress...</h2>
+            </section>
+        <section id="projects">
+            <h2 id="projects-title">These are some of my projects</h2>
+            <div id="container">
+                <figure>
+                    <img class ="project-tile" src=".\my_tribute_page_img.png">
+                    <div class="img-caption">
+                        <figcaption class="cc"><a href="https://codepen.io/itsDax/pen/MWrxyRB" target="_blank">Tribute Page</a></figcaption>
+                    </div>
+                    </figure>
+                <figure>
+                    <img class="project-tile" src=".\survey_form.png">
+                    <div class="img-caption">
+                        <figcaption class="cc"><a href="https://codepen.io/itsDax/pen/mdpoWLa" target="_blank">Survey Form</a></figcaption>
+                        </div>
+                    </figure>
+                    <figure>
+                        <img class="project-tile" src=".\landingpage.png">
+                        <div class="img-caption">
+                            <figcaption class="cc"><a href="https://codepen.io/itsDax/pen/yLprgYj" target="_blank">Landing Page</a></figcaption>
+                            </div>
+                        </figure>
+                        <figure>
+                            <img class="project-tile" src=".\documentationpage.png">
+                            <div class="img-caption">
+                                <figcaption class="cc"><a href="https://codepen.io/itsDax/pen/GRyVyQW" target="_blank">Documentation Page</a></figcaption>
+                                </div>
+                            </figure>
+                            <!-- <figure id="odd-one">
+                                <img class="project-tile" src=".\optical_illusion.png">
+                                <div class="img-caption">
+                                    <figcaption class="cc"><a href="https://codepen.io/itsDax/pen/BaJXJvY" target="_blank">Optical Illusion</a></figcaption>
+                                    </div>
+                                </figure> -->
+            </div>
+        </section>
+        <section id="contact-info" class="section-format">
+            <h1 id="contact-title" class="title-format">Let's work together</h1>
+            <h2 id="contact-subtitle" class="title-format">How do you take your coffee?</h2>
+            <a id="logo-link" href="https://github.com/ManuelAndrade1" target="_blank">
+            <img id="logo" src=".\github_logo.png" url="https://github.com/ManuelAndrade1">
+            </a>
+            </section>
+        </main>
+        </body>
+    </html>
